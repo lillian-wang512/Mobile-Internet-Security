@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<!--    package="com.vuln.strandhogg">-->
+
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TryATTACK"
+        tools:targetApi="31">
+
+
+    <activity  android:name="com.example.tryattack.MainActivity"
+            android:exported="true"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.tryattack.Innocent"
+            tools:ignore="MissingClass" />
+        <activity android:name="com.example.tryattack.Attack"
+            android:taskAffinity="com.example.truebeattacked"
+            android:allowTaskReparenting="true"
+            tools:ignore="MissingClass" />
+    </application>
+
+</manifest>
+
+
+
+
+
+<!--<?
+xml version="1.0" encoding="utf-8"?>-->
+<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools">-->
+
+<!--    <application-->
+<!--        android:allowBackup="true"-->
+<!--        android:dataExtractionRules="@xml/data_extraction_rules"-->
+<!--        android:fullBackupContent="@xml/backup_rules"-->
+<!--        android:icon="@mipmap/ic_launcher"-->
+<!--        android:label="@string/app_name"-->
+<!--        android:roundIcon="@mipmap/ic_launcher_round"-->
+<!--        android:supportsRtl="true"-->
+<!--        android:theme="@style/Theme.TryATTACK"-->
+<!--        tools:targetApi="31">-->
+
+<!--        <activity android:name=".Innocent"></activity>-->
+<!--        <activity-->
+<!--            android:name=".Attack"-->
+<!--            android:allowTaskReparenting="true"-->
+<!--            android:taskAffinity="com.example.tryattack" />-->
+<!--        <activity android:name=".MainActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+<!--&lt;!&ndash;        <activity&ndash;&gt;-->
+<!--&lt;!&ndash;            android:name=".MainActivity"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:exported="true">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <intent-filter>&ndash;&gt;-->
+<!--&lt;!&ndash;                <action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <intent-filter>&ndash;&gt;-->
+<!--&lt;!&ndash;                <action android:name="android.intent.action.MAIN" >&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;                    <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <action android:name="android.intent.action.VIEW" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <category android:name="android.intent.category.DEFAULT" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <category android:name="android.intent.category.BROWSABLE" />&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </action>&ndash;&gt;-->
+<!--&lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </activity>&ndash;&gt;-->
+<!--&lt;!&ndash;        <activity android:name=".Innocent">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <activity android:name=".Innocent">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <activity&ndash;&gt;-->
+<!--&lt;!&ndash;                android:allowTaskReparenting="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:name=".Attack"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:taskAffinity="com.example.tryattack"&ndash;&gt;-->
+<!--&lt;!&ndash;                tools:ignore="WrongManifestParent">&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash;&ndash;&gt;-->
+<!--&lt;!&ndash;        其中欲插入到合法活动前的恶意活动的taskAffinity属性就是欲攻击应用的包名&ndash;&gt;-->
+<!--&lt;!&ndash;        allowTaskReparenting属性为true&ndash;&gt;-->
+<!--&lt;!&ndash;        &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            </activity>&ndash;&gt;-->
+<!--&lt;!&ndash;        </activity>&ndash;&gt;-->
+
+<!--    </application>-->
+
+<!--</manifest>-->
